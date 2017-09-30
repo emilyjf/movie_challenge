@@ -22,7 +22,13 @@ class MovieLoader
                       time: time,
                       rating: rating
                       }
+
+      collection[0].each do |movies|
+        movies.each do |titles|
+          p titles["title"]
+      end
     end
+  end
 
     # writes to file, ruby terminal app
     File.open("movie_list.json","w") do |f|
@@ -30,3 +36,4 @@ class MovieLoader
     end
   end
 end
+
